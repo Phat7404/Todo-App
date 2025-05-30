@@ -1,0 +1,14 @@
+{
+  "name": "todo-app-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd todo-app && npm install && cd ../todo-fe && npm install",
+    "dev": "concurrently \"cd todo-app && npm run start:dev\" \"cd todo-fe && npm run dev\"",
+    "build": "concurrently \"cd todo-app && npm run build\" \"cd todo-fe && npm run build\"",
+    "start": "concurrently \"cd todo-app && npm run start:prod\" \"cd todo-fe && npm run start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
